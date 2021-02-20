@@ -15,19 +15,19 @@ const App = () => {
         <Navbar bg="dark" variant="dark">
           <Navbar.Brand>Space X</Navbar.Brand>
           <Nav className="mr-auto">
-            <LinkContainer activeStyle={{color: "red"}} to="/home">
+            <LinkContainer exact to="/">
               <Nav.Link>Home</Nav.Link>
             </LinkContainer>
-            <LinkContainer activeStyle={{color: "red"}} to="/rockets">
+            <LinkContainer to="/rockets">
               <Nav.Link>Rockets</Nav.Link>
             </LinkContainer>
-            <LinkContainer activeStyle={{color: "red"}} to="/launches">
+            <LinkContainer to="/launches">
               <Nav.Link>Launches</Nav.Link>
             </LinkContainer>
           </Nav>
         </Navbar>
         <Switch>
-          <Route exact path="/home">
+          <Route exact path="/">
             <Home />
           </Route>
           <Route path="/rockets">
