@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Rockets from "./screens/rockets.js";
 import Home from "./screens/home.js";
@@ -12,6 +11,7 @@ const App = () => {
   return (
     <Router>
       <div className="App">
+<<<<<<< Updated upstream
         <Navbar bg="dark" variant="dark">
           <Navbar.Brand>Space X</Navbar.Brand>
           <Nav className="mr-auto">
@@ -22,6 +22,18 @@ const App = () => {
               <Nav.Link>Rockets</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/launches">
+=======
+        <Navbar style={{backgroundColor:"#1a181d", paddingLeft:"3%", paddingRight:"5%"}}>
+          <Navbar.Brand style={{fontSize:'3em', color:"#efaa1a"}}>Space X</Navbar.Brand>
+          <Nav className="ml-auto">
+            <LinkContainer style={{color:"white"}} activeStyle={{color: "#efaa1a"}} to="/home">
+              <Nav.Link>Home</Nav.Link>
+            </LinkContainer>
+            <LinkContainer style={{color:"white"}} activeStyle={{color: "#efaa1a"}} to="/rockets">
+              <Nav.Link>Rockets</Nav.Link>
+            </LinkContainer>
+            <LinkContainer style={{color:"white"}} activeStyle={{color: "#efaa1a"}} to="/launches">
+>>>>>>> Stashed changes
               <Nav.Link>Launches</Nav.Link>
             </LinkContainer>
           </Nav>

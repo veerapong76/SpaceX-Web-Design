@@ -18,7 +18,7 @@ const Launches = () => {
         [],
       )
     return(
-        <div>
+        <div style={{margin:'5%'}}>
         {launches.map((launche) => (<Alert variant='primary'>{launche.flight_number}</Alert>))}
         </div>
     )
