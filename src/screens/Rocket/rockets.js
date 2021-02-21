@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {Card, Button} from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./style.css";
+import "../style.css";
 
 const Rockets = () => {
     const [rockets, setRockets] = useState([]);

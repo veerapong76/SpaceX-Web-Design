@@ -1,7 +1,8 @@
 import "./App.css";
-import Rockets from "./screens/rockets.js";
+import Rockets from "./screens/Rocket/rockets.js";
 import Home from "./screens/home.js";
-import Launches from "./screens/launches.js";
+import Launches from "./screens/Launche/launches.js";
+import LauncheDetail from "./screens/Launche/LauncheDetail.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Nav, Navbar } from "react-bootstrap";
@@ -32,9 +33,13 @@ const App = () => {
           <Route path="/rockets">
             <Rockets />
           </Route>
-          <Route path="/launches">
+          <Route exact path="/launches">
             <Launches />
           </Route>
+          <Route path="/launches/:launcheID">
+            <LauncheDetail/>
+          </Route>
+          
         </Switch>
       </div>
     </Router>
