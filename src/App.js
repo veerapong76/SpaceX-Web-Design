@@ -1,8 +1,9 @@
 import "./App.css";
 import Rockets from "./screens/Rocket/rockets.js";
+import Rocket from "./screens/Rocket/rocket.js"
 import Home from "./screens/home.js";
 import Launches from "./screens/Launche/launches.js";
-import LauncheDetail from "./screens/Launche/LauncheDetail.js";
+import Launch from "./screens/Launche/launch.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Nav, Navbar } from "react-bootstrap";
@@ -30,14 +31,17 @@ const App = () => {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/rockets">
+          <Route exact path="/rockets">
             <Rockets />
+          </Route>
+          <Route path="/rockets/:rocketID">
+            <Rocket/>
           </Route>
           <Route exact path="/launches">
             <Launches />
           </Route>
-          <Route path="/launches/:launcheID">
-            <LauncheDetail/>
+          <Route path="/launches/:launchID">
+            <Launch/>
           </Route>
           
         </Switch>

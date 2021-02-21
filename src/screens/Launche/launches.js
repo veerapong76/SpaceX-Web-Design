@@ -83,11 +83,11 @@ const Launches = () => {
         <option value="true">True</option>
         <option value="false">False</option>
       </select>
-      {launches.map((launche) => (
+      {launches.map((launch) => (
         <Alert variant="primary">
-          {launche.launch_year} {launche.rocket.rocket_name}{" "}
-          {launche.launch_succes}{" "}
-          <Link to={`${url}/${launche.flight_number}`}>
+          {launch.launch_year} {launch.rocket.rocket_name}{" "}
+          {launch.launch_succes}{" "}
+          <Link to={`${url}/${launch.flight_number}`}>
             <Button variant="warning">Detail</Button>
           </Link>
         </Alert>

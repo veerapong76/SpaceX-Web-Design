@@ -2,10 +2,18 @@ import React, { useState, useEffect } from "react";
 import {Card, Button} from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../style.css";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+} from "react-router-dom";
+
 
 const Rockets = () => {
     const [rockets, setRockets] = useState([]);
-  
+    let { path, url } = useRouteMatch();
     useEffect(
         () => {
           const fetchRockets = async () => {
@@ -35,7 +43,9 @@ const Rockets = () => {
                   <Card.Text>
                   {rocket.description}
                   </Card.Text>
-                  <Button variant="warning" href={rocket.wikipedia}>Wikipedia</Button>
+                  <Link to={`${url}/${rocket.id}`}>
+                  <Button variant="warning">Detail</Button>
+                  </Link>
                 </Card.Body>
               </Card>
               </div>
