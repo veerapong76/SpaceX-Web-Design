@@ -14,7 +14,7 @@ const App = () => {
         <Navbar style={{backgroundColor:"#1a181d", paddingLeft:"3%", paddingRight:"5%"}}>
           <Navbar.Brand style={{fontSize:'3em', color:"#efaa1a"}}>Space X</Navbar.Brand>
           <Nav className="ml-auto">
-            <LinkContainer style={{color:"white"}} activeStyle={{color: "#efaa1a"}} to="/home">
+            <LinkContainer style={{color:"white"}} activeStyle={{color: "#efaa1a"}} exact to="/">
               <Nav.Link>Home</Nav.Link>
             </LinkContainer>
             <LinkContainer style={{color:"white"}} activeStyle={{color: "#efaa1a"}} to="/rockets">
@@ -26,7 +26,7 @@ const App = () => {
           </Nav>
         </Navbar>
         <Switch>
-          <Route exact path="/home">
+          <Route exact path="/">
             <Home />
           </Route>
           <Route path="/rockets">
