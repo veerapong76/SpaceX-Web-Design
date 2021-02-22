@@ -3,6 +3,28 @@
 h1,h4 {
     font-family: 'Kanit', sans-serif;
 }
+p {
+    font-family: 'Kanit', sans-serif;
+    color: white;
+    font-size: 1.5em;
+}
 ylt {
     color: #f8b817;
+}
+html{
+    background-color:#1a181d;
+}
+.bgweb {
+    /* position: absolute; */
+    background-color:#1a181d;
+    height:100vh;
+    width:100%;
+    margin:0;
+}
+
+.mywave {
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    padding: 0;
 }
